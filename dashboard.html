@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>كتالوج BOOM FASHION | المنتجات</title>
+    <style>
+        body { font-family: 'Cairo', sans-serif; background: #121212; color: #fff; padding: 20px; }
+        .header { text-align: center; border-bottom: 2px solid #d4af37; padding-bottom: 20px; margin-bottom: 30px; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 25px; }
+        .card { background: #1e1e1e; border-radius: 15px; padding: 15px; border: 1px solid #333; transition: 0.3s; }
+        .card:hover { border-color: #d4af37; transform: translateY(-5px); }
+        .card img { width: 100%; height: 200px; border-radius: 10px; object-fit: cover; }
+        .price { color: #d4af37; font-size: 1.3em; font-weight: bold; margin: 10px 0; }
+        .share-btn { width: 100%; padding: 12px; background: #d4af37; color: black; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>مجموعة BOOM FASHION الحصرية</h1>
+</div>
+
+<div class="product-grid">
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1595950653106-6c8ebd616d3a" alt="منتج">
+        <h3>كوتشي رياضي فاخر</h3>
+        <div class="price">الجملة: 200 ج.م</div>
+        <button class="share-btn" onclick="alert('تم نسخ تفاصيل المنتج لمشاركته')">شارك وربح</button>
+    </div>
+    </div>
+
+</body>
+</html>
