@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOM FASHION | بوابتك للربح</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%); display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; color: #fff; }
+        .box { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 40px; border-radius: 20px; width: 90%; max-width: 400px; text-align: center; border: 1px solid rgba(255, 255, 255, 0.2); }
+        h1 { color: #d4af37; margin-bottom: 5px; letter-spacing: 2px; }
+        .tabs { display: flex; gap: 10px; margin-bottom: 20px; }
+        .tab-btn { flex: 1; padding: 10px; background: none; border: 1px solid #d4af37; color: #d4af37; border-radius: 8px; cursor: pointer; transition: 0.3s; }
+        .tab-btn.active { background: #d4af37; color: #000; }
+        input { width: 100%; padding: 15px; margin: 10px 0; border: none; border-radius: 8px; background: rgba(255,255,255,0.9); box-sizing: border-box; }
+        button.submit-btn { width: 100%; padding: 15px; background: #d4af37; color: black; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h1>BOOM FASHION</h1>
+    <div class="tabs">
+        <button class="tab-btn active" onclick="switchMode('register')">إنشاء حساب</button>
+        <button class="tab-btn" onclick="switchMode('login')">تسجيل دخول</button>
+    </div>
+
+    <form id="authForm">
+        <input type="text" id="nameField" placeholder="الاسم بالكامل" required>
+        <input type="tel" placeholder="رقم الهاتف" required>
+        <input type="password" placeholder="كلمة المرور" required>
+        <button type="submit" class="submit-btn" id="btnText">إنشاء الحساب</button>
+    </form>
+</div>
+
+<script>
+    function switchMode(mode) {
+        const nameField = document.getElementById('nameField');
+        const btnText = document.getElementById('btnText');
+        const btns = document.querySelectorAll('.tab-btn');
+        
+        btns.forEach(b => b.classList.toggle('active'));
+        
+        if(mode === 'login') {
+            nameField.style.display = 'none';
+            btnText.innerText = 'تسجيل الدخول';
+        } else {
+            nameField.style.display = 'block';
+            btnText.innerText = 'إنشاء الحساب';
+        }
+    }
+</script>
+
+</body>
+</html>
